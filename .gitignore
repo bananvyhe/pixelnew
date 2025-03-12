@@ -46,4 +46,4 @@ node_modules
 *.local
 .kamal/secrets
  
-config/credentials.yml.enc
+# config/credentials.yml.enc

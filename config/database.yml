@@ -18,9 +18,10 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: <%= Rails.application.credentials.user_name %>
-  password: <%= Rails.application.credentials.datebase %>
-
+  username: <%= Rails.application.credentials.dig(:db, :username) %>
+  password: <%= Rails.application.credentials.dig(:db, :password) %>
+  host: 127.0.0.1
+  port: 5432
 development:
   <<: *default
   database: pixelnew_development
@@ -83,7 +84,6 @@ production:
   primary: &primary_production
     <<: *default
     database: pixelnew_production
-    username: deploy
   cache:
     <<: *primary_production
     database: pixelnew_production_cache

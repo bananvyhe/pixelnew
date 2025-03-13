@@ -80,13 +80,10 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  host: 127.0.0.1
-  port: 5432
   primary: &primary_production
     <<: *default
     database: pixelnew_production
     username: deploy
-    password: <%= Rails.application.credentials.datebase %>
   cache:
     <<: *primary_production
     database: pixelnew_production_cache

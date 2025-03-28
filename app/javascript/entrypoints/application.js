@@ -13,6 +13,14 @@ console.log('Vite ⚡️ Rails')
 
 console.log('Visit the guide for more information: ', 'https://vite-ruby.netlify.app/guide/rails')
 import { createApp } from 'vue/dist/vue.esm-bundler';
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
+const vuetify = createVuetify({
+  components,
+  directives,
+})
 const app = createApp({
 data() {
     return {
@@ -20,7 +28,7 @@ data() {
     }  
   }  
 })
-
+app.use(vuetify);
 app.mount('#app');
 console.log("app", app);
 

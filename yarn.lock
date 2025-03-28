@@ -887,6 +887,7 @@ __metadata:
     vite-plugin-full-reload: "npm:^1.2.0"
     vite-plugin-ruby: "npm:^5.1.0"
     vue: "npm:^3.5.13"
+    vuetify: "npm:^3.7.19"
   languageName: unknown
   linkType: soft
 
@@ -3924,6 +3925,25 @@ __metadata:
     typescript:
       optional: true
   checksum: 10c0/4bbb5caf3f04fed933b01c100804f3693ff902984a3152ea1359a972264fa3240f6551d32f0163a79c64df3715b4d6691818c9f652cdd41b2473c69e2b0a373d
+  languageName: node
+  linkType: hard
+
+"vuetify@npm:^3.7.19":
+  version: 3.7.19
+  resolution: "vuetify@npm:3.7.19"
+  peerDependencies:
+    typescript: ">=4.7"
+    vite-plugin-vuetify: ">=1.0.0"
+    vue: ^3.3.0
+    webpack-plugin-vuetify: ">=2.0.0"
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+    vite-plugin-vuetify:
+      optional: true
+    webpack-plugin-vuetify:
+      optional: true
+  checksum: 10c0/8eda1fbf08cc0fbcab1fed7fab947d1a485353774be4db941cd5a9129011798a18e4d2e83fcc64555c85c9eb77ad6706e7d4c23101de00cde4663b88d00ffff2
   languageName: node
   linkType: hard
 

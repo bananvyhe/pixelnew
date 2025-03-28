@@ -13,10 +13,12 @@ console.log('Vite ⚡️ Rails')
 
 console.log('Visit the guide for more information: ', 'https://vite-ruby.netlify.app/guide/rails')
 import { createApp } from 'vue/dist/vue.esm-bundler';
+import { createPinia } from 'pinia'
 import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
+const pinia = createPinia()
 const vuetify = createVuetify({
   components,
   directives,
@@ -28,6 +30,7 @@ data() {
     }  
   }  
 })
+app.use(pinia)
 app.use(vuetify);
 app.mount('#app');
 console.log("app", app);

@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-app >
-      <!-- <headpart></headpart>   -->
+      <headpart></headpart>  
 
       <v-main>
   
@@ -14,7 +14,7 @@
 
 <script setup lang="ts">
 import { mapState } from 'pinia'
-// import Headpart from './packs/components/head.vue'
+import Headpart from '../components/head.vue'
 // import NotFound from './packs/components/404.vue';
 import { ref, onMounted} from "vue";
 import { useLogStore } from '../store.js'

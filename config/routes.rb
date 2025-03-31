@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 get "welcome/index"
 root to: "welcome#index"
+post 'refresh', controller: :refresh, action: :create
+post 'signin', controller: :signin, action: :create
+post 'signup', controller: :signup, action: :create
+delete 'signin', controller: :signin, action: :destroy
   # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker

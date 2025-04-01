@@ -115,7 +115,7 @@
   function signup(){
     console.log("signing up...")
       plain
-        .post('/signup', { email: email.value, password: password.value, password_confirmation: password_confirmation.value, loa: store.tloa })
+        .post('/signup', { email: email.value, password: password.value, password_confirmation: password_confirmation.value})
         // .then(response => signupSuccessful(response))
         // .catch(error => signupFailed(error))  
           .then((response: { data: any }) => {

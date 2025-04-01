@@ -1,5 +1,5 @@
 <template>
-   23456
+контент
 </template>
 
 <script setup lang="ts">

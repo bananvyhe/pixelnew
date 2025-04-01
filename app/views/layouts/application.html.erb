@@ -31,7 +31,11 @@
 
       Visit the guide for more information: https://vite-ruby.netlify.app/guide/rails
     -->
-
+<script>
+  window.APP_CONFIG = {
+    apiUrl: "<%= Rails.application.config.app_config["api_url"] %>"
+  };
+</script>
   </head>
 
   <body>

@@ -13,7 +13,7 @@ import App from './app.vue'
 //     <%= vite_javascript_tag 'application.jsx' %>
 
 console.log('Visit the guide for more information: ', 'https://vite-ruby.netlify.app/guide/rails')
-
+import { securedAxiosInstance, plainAxiosInstance } from '../backend/axios'
 import { createPinia } from 'pinia'
 import { createRouter, createWebHistory } from 'vue-router'
 import routes from './routes'
@@ -21,6 +21,9 @@ import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
+import Notifications from '@kyvg/vue3-notification'
+import VueAxios from 'vue-axios'
+
 const pinia = createPinia()
 const app = createApp(App);
 const vuetify = createVuetify({
@@ -31,7 +34,14 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
 })
- 
+app.use(VueAxios, {
+  secured: securedAxiosInstance,
+  plain: plainAxiosInstance
+})
+app.provide('plain', app.config.globalProperties.plain) 
+app.provide('secured', app.config.globalProperties.secured) 
+app.provide('axios', app.config.globalProperties.axios)
+app.use(Notifications)
 app.use(router)
 app.use(pinia)
 app.use(vuetify);

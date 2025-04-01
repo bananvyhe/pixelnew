@@ -26,6 +26,7 @@ services:
       - db
       - redis
     environment:
+      FRONTEND_URL: "https://nagovets.ru"
       REDIS_URL: "redis://redis:6379/0"  # Указываем адрес Redis для Docker
       DATABASE_URL: postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/pixelnew_production
       RAILS_ENV: production

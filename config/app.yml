@@ -1,0 +1,4 @@
+development:
+  api_url: "http://localhost:3000"
+production:
+  api_url: "https://nagovets.ru"

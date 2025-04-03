@@ -1,12 +1,10 @@
 <template>
   <div>
     <v-app >
-      <headpart></headpart>  
-
+      <headpart></headpart>
+      <menuf></menuf>
       <v-main>
-  
         <router-view></router-view>
-
       </v-main>
     </v-app>    
   </div>
@@ -18,6 +16,7 @@ import Headpart from '../components/head.vue'
 // import NotFound from './packs/components/404.vue';
 import { ref, onMounted} from "vue";
 import { useLogStore } from '../store.js'
+import Menuf from '../components/menu.vue'
 
  
  

@@ -1,7 +1,11 @@
 <template> 
-  <v-app-bar density="compact"  flat rounded color="transparent" class="appbar align-start">
-    <!-- <v-spacer></v-spacer> -->
+  <v-app-bar density="compact"  flat rounded color="transparent" class="appbar ">
+            
+    <!--  -->
     <v-container class = "px-0 d-flex justify-end ">
+      <signup></signup>
+        <signin ></signin>
+        <v-spacer></v-spacer>
       <div class="d-flex d-sm-flex " > 
         <div class="d-flex ">
           <v-card outlined class="d-flex menu mr-2 d-xs-none d-sm-flex">
@@ -20,6 +24,8 @@
 </template>
 <script setup lang="ts">
 import { ref, computed, inject, onMounted } from 'vue';
+import Signup from './sign_up.vue';
+import Signin from './sign_in.vue';
 const drawer = ref(false)
 const parts = ref([
   {name: 'Обо мне', classname:'#about_block'},{name: 'Образование', classname: '.know_block'},{name: 'Как проходит консультация?', classname: '.konsultBlock'},{name:'Отзывы', classname: '.rev_block'},{name:'Стоимость', classname: '.price_block'},{name:'Контакты', classname: '.contact_block'}

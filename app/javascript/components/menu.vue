@@ -1,16 +1,26 @@
 <template> 
-<div class="d-flex align-center">
-              <v-card outlined class="d-flex menu mr-2 d-xs-none d-sm-flex"> 
-  <div v-for="(item, index) in parts"> 
-    <v-list-item>
-      <v-list-item-title  ref="button" @click="handler(item.name, item.classname)"> 
-        <h5>{{item.name}}</h5> 
-      </v-list-item-title>
-    </v-list-item>
-  </div></v-card></div>
+  <v-app-bar density="compact"  flat rounded color="transparent" class="appbar align-start">
+    <!-- <v-spacer></v-spacer> -->
+    <v-container class = "px-0 d-flex justify-end ">
+      <div class="d-flex d-sm-flex " > 
+        <div class="d-flex ">
+          <v-card outlined class="d-flex menu mr-2 d-xs-none d-sm-flex">
+            <div v-for="(item, index) in parts"> 
+              <v-list-item>
+                <v-list-item-title  ref="button" @click="handler(item.name, item.classname)"> 
+                  <h5>{{item.name}}</h5> 
+                </v-list-item-title>
+              </v-list-item>
+            </div>
+          </v-card>
+        </div>
+      </div>
+    </v-container>
+  </v-app-bar>
 </template>
 <script setup lang="ts">
 import { ref, computed, inject, onMounted } from 'vue';
+const drawer = ref(false)
 const parts = ref([
   {name: 'Обо мне', classname:'#about_block'},{name: 'Образование', classname: '.know_block'},{name: 'Как проходит консультация?', classname: '.konsultBlock'},{name:'Отзывы', classname: '.rev_block'},{name:'Стоимость', classname: '.price_block'},{name:'Контакты', classname: '.contact_block'}
 ]);

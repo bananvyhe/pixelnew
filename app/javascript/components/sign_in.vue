@@ -5,7 +5,7 @@
         max-width="600">
         <template v-slot:activator="{ props }">
           <v-btn
-            size="small"
+            density="compact"
             color="secondary"
             v-bind="props"
             variant="tonal">

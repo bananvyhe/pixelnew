@@ -2,7 +2,7 @@
   <v-app-bar density="compact"  flat rounded color="transparent" class="appbar ">
             
     <!--  -->
-    <v-container class = "px-0 d-flex justify-end ">
+    <v-container class = "px-2  d-flex justify-end align-center">
       <signup></signup>
         <signin ></signin>
         <v-spacer></v-spacer>
@@ -10,11 +10,12 @@
         <div class="d-flex ">
           <v-card outlined class="d-flex menu mr-2 d-xs-none d-sm-flex">
             <div v-for="(item, index) in parts"> 
-              <v-list-item>
-                <v-list-item-title  ref="button" @click="handler(item.name, item.classname)"> 
-                  <h5>{{item.name}}</h5> 
-                </v-list-item-title>
-              </v-list-item>
+              <v-btn
+                @click="handler(item.name, item.classname)"
+                density="compact"
+                color="primary">
+                {{item.name}}
+              </v-btn> 
             </div>
           </v-card>
         </div>

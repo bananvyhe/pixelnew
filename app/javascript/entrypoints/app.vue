@@ -1,5 +1,5 @@
 <template>
-      <v-container>
+      <v-container class = " py-0">
     <v-app >
       <headpart ></headpart>
       <!-- <v-spacer></v-spacer> -->

@@ -6,9 +6,9 @@
         <template v-slot:activator="{ props }">
           <v-btn
             density="compact"
-            color="secondary"
+            size="x-small"
             v-bind="props"
-            variant="tonal">
+            variant="text">
             Войти
           </v-btn>
         </template>

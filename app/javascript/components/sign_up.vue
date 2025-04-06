@@ -4,10 +4,10 @@
         max-width="600">
         <template v-slot:activator="{ props }">
           <v-btn
-          density="compact"
-            color="secondary"
+            density="compact"
+            size="x-small"
             v-bind="props"
-            variant="tonal"
+            variant="text"
           >Регистрация</v-btn>
         </template>
       

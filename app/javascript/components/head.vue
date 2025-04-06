@@ -1,19 +1,28 @@
 <template>  
 <!-- 	<v-app-bar dense fixed flat hide-on-scroll rounded color="transparent" class="appbar">
-
- 
 	</v-app-bar> -->
- 
-
+	<div class="log d-flex "> 
+	  <signup></signup>
+	  <signin ></signin>
+	</div>
 	<div class="headone"></div>
 		<div class="headblock">123</div>
 	<div  class="headtwo"></div>
+ 
 </template>
 <script setup lang="ts">
-
+import Signup from './sign_up.vue';
+import Signin from './sign_in.vue';
  
 </script>
 <style>
+	.log{
+		top: 0.5em;
+		z-index: 99;
+		position: absolute;
+		right: 0;
+		width: 100px;
+	}
 	.headblock{
 		background-image: url('./images/head2.jpg');
 		height: 215px;

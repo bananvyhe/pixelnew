@@ -34,6 +34,7 @@ gem "kamal", require: false
 gem "jwt_sessions"
 gem 'bcrypt', '~> 3.1.7'
 gem 'rack-cors'
+gem "httparty"
 gem "redis"
 # Add HTTP asset caching/compression and X-Sendfile acceleration to Puma [https://github.com/basecamp/thruster/]
 gem "thruster", require: false

@@ -11,6 +11,7 @@ import App from './app.vue'
 //
 // If you want to use .jsx or .tsx, add the extension:
 //     <%= vite_javascript_tag 'application.jsx' %>
+import '../styles/variables.scss'
 
 console.log('Visit the guide for more information: ', 'https://vite-ruby.netlify.app/guide/rails')
 import { securedAxiosInstance, plainAxiosInstance } from '../backend/axios'

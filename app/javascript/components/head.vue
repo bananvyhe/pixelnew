@@ -21,7 +21,7 @@ import Signin from './sign_in.vue';
 		z-index: 99;
 		position: absolute;
 		right: 0;
-		width: 100px;
+		width: -100px;
 	}
 	.headblock{
 		background-image: url('./images/head2.jpg');

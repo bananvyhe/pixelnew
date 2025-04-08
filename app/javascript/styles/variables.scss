@@ -1,5 +1,21 @@
-// Пример: глобальные переменные Vuetify
- 
+@use 'vuetify/settings' with (
+  $body-font-family: 'Arial',
+  $heading-font-family: 'Play',
+  $border-radius-root: 4px,
+  $card-border-radius: 4px,
+  $grid-breakpoints:  (
+    'xs': 0,
+    'sm': 760px,
+    'md': 1060px,
+    'lg': 1180px - 16px,
+    'xl': 1180px - 16px,
+    'xxl': 1380px - 16px,
+  ),
+
+);
+
+// свои переменные (если нужны)
+// $my-accent-color: #ff9900;
 
 // Свои кастомные стили
 body {

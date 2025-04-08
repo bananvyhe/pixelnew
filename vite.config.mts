@@ -9,7 +9,8 @@ export default defineConfig({
     RubyPlugin(),
     vue(),
     vuetify({ 
-      autoImport: true
+      autoImport: true,
+      styles: { configFile: path.resolve(__dirname, 'app/javascript/styles/variables.scss') },
     })
   ],
   resolve: {

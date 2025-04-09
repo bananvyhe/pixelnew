@@ -1,26 +1,27 @@
 <template> 
-  <!-- <v-app-bar density="compact"  flat rounded color="transparent" class="appbar "> -->
+  <!-- <v-app-bar density="compact"  flat  > -->
             
     <!--  -->
-    <v-container class = "px-2  d-flex justify-end align-center">
+    <!-- <v-container class = "px-2  d-flex justify-end  "> -->
 
-        <v-spacer></v-spacer>
+      
       <div class="d-flex d-sm-flex " > 
-        <div class="d-flex ">
+        <div class="d-flex menuline">
           <!-- <v-card outlined class="d-flex menu mr-2 d-xs-none d-sm-flex"> -->
             <div v-for="(item, index) in parts"> 
               <v-btn
-                class="mx-1"
+
+                class="text-end"
                 @click="handler(item.name, item.classname)"
                 density="compact"
-                color="primary">
+                color="background">
                 {{item.name}}
               </v-btn> 
             </div>
           <!-- </v-card> -->
         </div>
       </div>
-    </v-container>
+    <!-- </v-container> -->
   <!-- </v-app-bar> -->
 </template>
 <script setup lang="ts">
@@ -33,6 +34,9 @@ const parts = ref([
  
 </script>
 <style>
+  .menuline{
+    background-color: #1aa465;
+  }
  .list6b {
    
   position: relative;
